@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.vehicles {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    align-items: center;
+    &-list {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-rows: min-content;
+        gap: 1rem;
+    }
+    &-button {
+        background-image: $content-bg;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: 1px solid #fff;
+        width: max-content;
+    }
+    &-empty {
+        text-align: center;
+    }
+}

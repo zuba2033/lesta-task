@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-image: $content-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

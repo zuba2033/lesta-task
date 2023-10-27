@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.typeFilter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 3px;
+    grid-template-rows: auto;
+    margin-top: 1rem;
+    padding-left: 0.2rem;
+    &-button {
+        border: 1px solid #fff;
+        width: 100%;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        padding: 1rem 10px;
+        background-image: $content-bg;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .active {
+        border: none;
+        background-image: none;
+    }
+    .active .typeFilter-name {
+        color:#000;
+    }
+}
+
+
+
+
+

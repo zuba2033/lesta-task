@@ -1,0 +1,38 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  max-width: 2400px;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url('../../assets/mainBg2.jpeg');
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
+  &-container {
+    margin: 0 auto;
+    max-width: 1920px;
+  }
+  &-content {
+    gap: 0.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 270px 1fr;
+  }
+  &-logo {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    height: 200px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.active {
+  background-color: rgba($color: #fff, $alpha: 0.8);
+}
+
