@@ -1,27 +1,38 @@
-# React + TypeScript + Vite
+Задача -- разработать страницу с отображением всех кораблей игры «Мир Кораблей». Пользователь должен иметь возможность посмотреть на странице основные параметры корабля: название, класс, нация, уровень, описание, изображение и отфильтровать корабли по уровню, нации и классу. В качестве референса можно использовать клиент игры. Внешний вид на ваше усмотрение.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Необходимые данные можно получить выполнив GraphQL запрос к API. Запросы должны выполняться с localhost в качестве origin, ввиду ограничений CORS.
 
-Currently, two official plugins are available:
+``{
+  vehicles {
+    title
+    description
+    icons {
+      large
+      medium
+    }
+    level
+    type {
+      name
+    	title
+      icons {
+        default
+      }
+    }
+    nation {
+      name
+      title
+      color
+      icons {
+        small
+        medium
+        large
+      }
+    }
+  }
+}``
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Требования к технической реализации:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+typescript;
+всё остальное на ваше усмотрение.
+Опишите, пожалуйста, как можно улучшить вашу реализацию если бы вы могли уделить больше времени.
